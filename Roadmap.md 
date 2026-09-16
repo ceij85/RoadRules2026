@@ -1,0 +1,64 @@
+# RoadRules2026 Roadmap
+
+## Version 1.1
+- [ ] High Score Tracking
+- [ ] Last Score
+- [ ] Tests Taken
+
+## Version 1.2
+- [ ] 50 Questions
+- [ ] Question Categories
+
+## Version 1.3
+- [ ] Study Mode
+
+## Version 1.4
+- [ ] Road Sign Categories
+- [ ] More Sign Images
+
+## Version 1.5
+- [ ] Statistics Dashboard
+- [ ] Average Score
+- [ ] Questions Answered
+
+## Version 1.6
+- [ ] Custom App Icon
+
+## Version 2.0
+- [ ] 100 Questions
+- [ ] Timed Exam Mode
+- [ ] iPhone Testing
+
+## Completed
+- [x] Randomized Quiz
+- [x] Percentage Scoring
+- [x] Results Screen
+- [x] Road Signs
+- [x] Git Setup
+- [x] GitHub Repository
+
+# Feature Ideas
+
+## Statistics
+- Best Score
+- Last Score
+- Tests Taken
+- Average Score
+
+## Quiz
+- 100 Questions
+- Difficulty Levels
+- Timed Exam
+
+## Study
+- Study Mode
+- Explanations
+
+## UI
+- App Icon
+- Dark Mode
+
+## Release
+- Test on iPhone
+- App Store Version
+``

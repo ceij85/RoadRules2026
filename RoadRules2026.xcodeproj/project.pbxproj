@@ -9,12 +9,24 @@
 /* Begin PBXBuildFile section */
 		2321EB7D305AF88C00FC481A /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321EB7C305AF88C00FC481A /* ResultsView.swift */; };
 		2321EB7F305B0E0B00FC481A /* RoadSignsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321EB7E305B0E0B00FC481A /* RoadSignsView.swift */; };
+		2321EBA5305B2D7700FC481A /* Roadmap.md  in Resources */ = {isa = PBXBuildFile; fileRef = 2321EBA4305B2D3400FC481A /* Roadmap.md  */; };
+		2321EBA7305B2E0D00FC481A /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 2321EBA6305B2E0600FC481A /* Readme.md */; };
+		2321EBA9305B2E5600FC481A /* DEVLOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 2321EBA8305B2E4A00FC481A /* DEVLOG.md */; };
+		2321EBAB305B305B00FC481A /* Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 2321EBAA305B305000FC481A /* Questions.md */; };
+		2321EBAE305B38C100FC481A /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321EBAD305B38C100FC481A /* StatisticsView.swift */; };
+		2321EBAF305B38C200FC481A /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321EBAC305B38A800FC481A /* Untitled.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* RoadRules2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadRules2026.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2321EB7C305AF88C00FC481A /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		2321EB7E305B0E0B00FC481A /* RoadSignsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadSignsView.swift; sourceTree = "<group>"; };
+		2321EBA4305B2D3400FC481A /* Roadmap.md  */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Roadmap.md "; sourceTree = "<group>"; };
+		2321EBA6305B2E0600FC481A /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		2321EBA8305B2E4A00FC481A /* DEVLOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DEVLOG.md; sourceTree = "<group>"; };
+		2321EBAA305B305000FC481A /* Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Questions.md; sourceTree = "<group>"; };
+		2321EBAC305B38A800FC481A /* Untitled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untitled.swift; sourceTree = "<group>"; };
+		2321EBAD305B38C100FC481A /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -37,7 +49,13 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				2321EBAD305B38C100FC481A /* StatisticsView.swift */,
+				2321EBA8305B2E4A00FC481A /* DEVLOG.md */,
+				2321EBA6305B2E0600FC481A /* Readme.md */,
+				2321EBA4305B2D3400FC481A /* Roadmap.md  */,
+				2321EBAA305B305000FC481A /* Questions.md */,
 				2321EB7C305AF88C00FC481A /* ResultsView.swift */,
+				2321EBAC305B38A800FC481A /* Untitled.swift */,
 				2321EB7E305B0E0B00FC481A /* RoadSignsView.swift */,
 				000000000000000000000010 /* RoadRules2026 */,
 				000000000000000000000020 /* Products */,
@@ -111,6 +129,10 @@
 		000000000000000140000000 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				2321EBA5305B2D7700FC481A /* Roadmap.md  in Resources */,
+				2321EBAB305B305B00FC481A /* Questions.md in Resources */,
+				2321EBA9305B2E5600FC481A /* DEVLOG.md in Resources */,
+				2321EBA7305B2E0D00FC481A /* Readme.md in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
@@ -121,6 +143,8 @@
 			files = (
 				2321EB7D305AF88C00FC481A /* ResultsView.swift in Sources */,
 				2321EB7F305B0E0B00FC481A /* RoadSignsView.swift in Sources */,
+				2321EBAF305B38C200FC481A /* Untitled.swift in Sources */,
+				2321EBAE305B38C100FC481A /* StatisticsView.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */

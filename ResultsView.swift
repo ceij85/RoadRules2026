@@ -6,54 +6,99 @@ struct ResultsView: View {
     let totalQuestions: Int
     let restartQuiz: () -> Void
 
-    var body: some View {
+    @AppStorage("bestScore") private var bestScore = 0
+    @AppStorage("testsTaken") private var testsTaken = 0
+    @AppStorage("lastScore") private var lastScore = 0
+    @AppStorage("totalScore") private var totalScore = 0
 
-        let percentage = Int(
-            Double(score) /
-            Double(totalQuestions) * 100
-        )
+    var percentage: Int {
+        Int((Double(score) / Double(totalQuestions)) * 100)
+    }
 
-        let letterGrade: String
-
+    var letterGrade: String {
         switch percentage {
         case 90...100:
-            letterGrade = "A"
+            return "A"
         case 80..<90:
-            letterGrade = "B"
+            return "B"
         case 70..<80:
-            letterGrade = "C"
+            return "C"
         case 60..<70:
-            letterGrade = "D"
+            return "D"
         default:
-            letterGrade = "F"
+            return "F"
         }
+    }
 
-        return VStack(spacing: 20) {
+    var body: some View {
 
-            Text("🎉 Quiz Complete!")
-                .font(.largeTitle)
-                .fontWeight(.bold)
+        ZStack {
 
-            Text("Final Score")
-                .font(.title2)
+            LinearGradient(
+                colors: [.blue, .cyan],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
 
-            Text("\(score) / \(totalQuestions)")
-                .font(.system(size: 50))
-                .fontWeight(.bold)
+            VStack(spacing: 20) {
 
-            Text("\(percentage)%")
-                .font(.title)
-                .fontWeight(.semibold)
+                Text("🎉 Quiz Complete!")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
 
-            Text("Grade: \(letterGrade)")
-                .font(.title2)
+                Text("\(score) / \(totalQuestions)")
+                    .font(.system(size: 50))
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
 
-            Button("Try Again") {
-                restartQuiz()
+                Text("\(percentage)%")
+                    .font(.title)
+                    .foregroundColor(.white)
+
+                Text("Grade: \(letterGrade)")
+                    .font(.title2)
+                    .foregroundColor(
+                        letterGrade == "A" ? .green :
+                        letterGrade == "B" ? .blue :
+                        letterGrade == "C" ? .yellow :
+                        letterGrade == "D" ? .orange :
+                        .red
+                    )
+
+                VStack(spacing: 10) {
+
+                    Text("Best Score: \(bestScore)%")
+
+                    Text("Last Score: \(lastScore)%")
+
+                    Text("Tests Taken: \(testsTaken)")
+                }
+                .padding()
+                .background(.ultraThinMaterial)
+                .cornerRadius(15)
+
+                Button("Try Again") {
+                    restartQuiz()
+                }
+                .buttonStyle(.borderedProminent)
             }
-            .buttonStyle(.borderedProminent)
+            .padding()
         }
-        .padding()
+        .onAppear {
+
+            testsTaken += 1
+            
+            totalScore += percentage
+
+            lastScore = percentage
+            
+
+            if percentage > bestScore {
+                bestScore = percentage
+            }
+        }
     }
 }
 
