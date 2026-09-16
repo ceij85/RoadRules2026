@@ -1,10 +1,3 @@
-//
-//  ResultsView.swift
-//  MyApp
-//
-//  Created by Charles E Ingram Jr on 9/16/26.
-//
-
 import SwiftUI
 
 struct ResultsView: View {
@@ -15,7 +8,27 @@ struct ResultsView: View {
 
     var body: some View {
 
-        VStack(spacing: 20) {
+        let percentage = Int(
+            Double(score) /
+            Double(totalQuestions) * 100
+        )
+
+        let letterGrade: String
+
+        switch percentage {
+        case 90...100:
+            letterGrade = "A"
+        case 80..<90:
+            letterGrade = "B"
+        case 70..<80:
+            letterGrade = "C"
+        case 60..<70:
+            letterGrade = "D"
+        default:
+            letterGrade = "F"
+        }
+
+        return VStack(spacing: 20) {
 
             Text("🎉 Quiz Complete!")
                 .font(.largeTitle)
@@ -23,14 +36,17 @@ struct ResultsView: View {
 
             Text("Final Score")
                 .font(.title2)
-            let percentage = Int(
-                Double(score) /
-                Double(totalQuestions) * 100
-            )
 
             Text("\(score) / \(totalQuestions)")
                 .font(.system(size: 50))
                 .fontWeight(.bold)
+
+            Text("\(percentage)%")
+                .font(.title)
+                .fontWeight(.semibold)
+
+            Text("Grade: \(letterGrade)")
+                .font(.title2)
 
             Button("Try Again") {
                 restartQuiz()
@@ -46,7 +62,5 @@ struct ResultsView: View {
         score: 8,
         totalQuestions: 10,
         restartQuiz: {}
-        
     )
 }
-

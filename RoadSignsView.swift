@@ -1,10 +1,3 @@
-//
-//  RoadSignsView.swift
-//  MyApp
-//
-//  Created by Charles E Ingram Jr on 9/16/26.
-//
-
 import SwiftUI
 
 struct RoadSignsView: View {
@@ -13,17 +6,43 @@ struct RoadSignsView: View {
 
         List {
 
-            Text("🛑 STOP")
-            Text("Yield the right of way.")
+            Section("Common Signs") {
 
-            Text("⚠️ WARNING")
-            Text("Hazard ahead.")
+                VStack(alignment: .leading) {
+                    Text("🛑 STOP")
+                        .font(.headline)
 
-            Text("🚸 SCHOOL")
-            Text("School zone or crossing.")
+                    Text("Come to a complete stop.")
+                }
 
-            Text("🚂 RAILROAD")
-            Text("Railroad crossing ahead.")
+                VStack(alignment: .leading) {
+                    Text("🔺 YIELD")
+                        .font(.headline)
+
+                    Text("Give the right of way to traffic and pedestrians.")
+                }
+
+                VStack(alignment: .leading) {
+                    Text("🚸 SCHOOL")
+                        .font(.headline)
+
+                    Text("School crossing or school zone ahead.")
+                }
+
+                VStack(alignment: .leading) {
+                    Text("🚂 RAILROAD")
+                        .font(.headline)
+
+                    Text("Railroad crossing ahead.")
+                }
+
+                VStack(alignment: .leading) {
+                    Text("⚠️ WARNING")
+                        .font(.headline)
+
+                    Text("A hazard or road condition is ahead.")
+                }
+            }
         }
         .navigationTitle("Road Signs")
     }
