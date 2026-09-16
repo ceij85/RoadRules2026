@@ -15,6 +15,7 @@
 		2321EBAB305B305B00FC481A /* Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 2321EBAA305B305000FC481A /* Questions.md */; };
 		2321EBAE305B38C100FC481A /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321EBAD305B38C100FC481A /* StatisticsView.swift */; };
 		2321EBAF305B38C200FC481A /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321EBAC305B38A800FC481A /* Untitled.swift */; };
+		2321EBBD305B60C300FC481A /* StudyModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321EBBC305B60C300FC481A /* StudyModeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		2321EBAA305B305000FC481A /* Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Questions.md; sourceTree = "<group>"; };
 		2321EBAC305B38A800FC481A /* Untitled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untitled.swift; sourceTree = "<group>"; };
 		2321EBAD305B38C100FC481A /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		2321EBBC305B60C300FC481A /* StudyModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyModeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -55,6 +57,7 @@
 				2321EBA4305B2D3400FC481A /* Roadmap.md  */,
 				2321EBAA305B305000FC481A /* Questions.md */,
 				2321EB7C305AF88C00FC481A /* ResultsView.swift */,
+				2321EBBC305B60C300FC481A /* StudyModeView.swift */,
 				2321EBAC305B38A800FC481A /* Untitled.swift */,
 				2321EB7E305B0E0B00FC481A /* RoadSignsView.swift */,
 				000000000000000000000010 /* RoadRules2026 */,
@@ -143,6 +146,7 @@
 			files = (
 				2321EB7D305AF88C00FC481A /* ResultsView.swift in Sources */,
 				2321EB7F305B0E0B00FC481A /* RoadSignsView.swift in Sources */,
+				2321EBBD305B60C300FC481A /* StudyModeView.swift in Sources */,
 				2321EBAF305B38C200FC481A /* Untitled.swift in Sources */,
 				2321EBAE305B38C100FC481A /* StatisticsView.swift in Sources */,
 			);

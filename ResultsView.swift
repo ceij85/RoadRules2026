@@ -30,12 +30,32 @@ struct ResultsView: View {
         }
     }
 
+    var gradeColors: [Color] {
+        switch letterGrade {
+
+        case "A":
+            return [.green, .mint]
+
+        case "B":
+            return [.blue, .cyan]
+
+        case "C":
+            return [.yellow, .orange]
+
+        case "D":
+            return [.orange, .red]
+
+        default:
+            return [.red, .black]
+        }
+    }
+
     var body: some View {
 
         ZStack {
 
             LinearGradient(
-                colors: [.blue, .cyan],
+                colors: gradeColors,
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -89,11 +109,10 @@ struct ResultsView: View {
         .onAppear {
 
             testsTaken += 1
-            
+
             totalScore += percentage
 
             lastScore = percentage
-            
 
             if percentage > bestScore {
                 bestScore = percentage

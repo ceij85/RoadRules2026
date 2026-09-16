@@ -54,6 +54,12 @@ struct ContentView: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .controlSize(.large)
+                    
+                    NavigationLink("📖 Study Mode") {
+                        StudyModeView()
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
 
                     NavigationLink("📖 Study Guide") {
                         Text("Study Guide Coming Soon")
