@@ -21,6 +21,20 @@ struct StudyModeView: View {
             $0.category == selectedCategory
         }
     }
+    func nextRandomQuestion() {
+
+        var newQuestion = currentQuestion
+
+        while newQuestion == currentQuestion &&
+              filteredQuestions.count > 1 {
+
+            newQuestion =
+                Int.random(in: 0..<filteredQuestions.count)
+        }
+
+        currentQuestion = newQuestion
+        showAnswer = false
+    }
     var body: some View {
 
         ZStack {
@@ -42,6 +56,8 @@ struct StudyModeView: View {
                     Text("🚦 Road Signs").tag("Road Signs")
 
                     Text("🦺 Safety").tag("Safety")
+                    
+                    Text("🚗 Parking").tag("Parking")
                 }
                 .pickerStyle(.menu)
 
@@ -116,7 +132,7 @@ struct StudyModeView: View {
                     
                 }
 
-                Button("➡️ Next Question") {
+                Button("🎲 Random Question") {
 
                     let category =
                         filteredQuestions[currentQuestion].category
@@ -136,7 +152,7 @@ struct StudyModeView: View {
                     }
 
                     currentQuestion =
-                        (currentQuestion + 1) % filteredQuestions.count
+                        Int.random(in: 0..<filteredQuestions.count)
 
                     showAnswer = false
                         filteredQuestions[currentQuestion].category
