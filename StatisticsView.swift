@@ -6,6 +6,7 @@ struct StatisticsView: View {
     @AppStorage("lastScore") private var lastScore = 0
     @AppStorage("testsTaken") private var testsTaken = 0
     @AppStorage("totalScore") private var totalScore = 0
+    @AppStorage("missedQuestions") private var missedQuestionsData = ""
     
     var averageScore: Int {
 
@@ -76,6 +77,15 @@ struct StatisticsView: View {
 
                 Spacer()
             }
+            NavigationLink {
+                ReviewMissedQuestionsView()
+            } label: {
+                Label(
+                    "Review Missed Questions",
+                    systemImage: "book.fill"
+                )
+            }
+            .padding(.top, 25)
             .padding()
         }
     }
