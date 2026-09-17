@@ -51,22 +51,34 @@ struct ReviewMissedQuestionsView: View {
 
                     VStack(
                         alignment: .leading,
-                        spacing: 10
+                        spacing: 12
                     ) {
 
                         Text(entry.question)
                             .font(.headline)
 
-                        Text(
-                            "Correct Answer: \(entry.answer)"
-                        )
-                        .foregroundColor(.green)
+                        Text("Correct Answer")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+
+                        Text(entry.answer)
+                            .font(.title3)
+                            .foregroundColor(.green)
 
                     }
-                    .padding(.vertical, 6)
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(.thinMaterial)
+                    .cornerRadius(15)
+                    .shadow(color: .black.opacity(0.15),
+                            radius: 5,
+                            x: 0,
+                            y: 3)
+                    .padding(.vertical, 4)
                 }
             }
         }
+        .listStyle(.automatic)
         .navigationTitle("Review Mistakes")
     }
 }
