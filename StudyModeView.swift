@@ -155,7 +155,6 @@ struct StudyModeView: View {
                         Int.random(in: 0..<filteredQuestions.count)
 
                     showAnswer = false
-                        filteredQuestions[currentQuestion].category
 
                     if category == "Road Rules" {
                         roadRulesViewed += 1

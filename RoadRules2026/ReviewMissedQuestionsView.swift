@@ -12,35 +12,65 @@ struct ReviewMissedQuestionsView: View {
     @AppStorage("missedQuestions")
     private var missedQuestionsData = ""
 
-    var questions: [String] {
+    var entries: [(question: String, answer: String)] {
+
         missedQuestionsData
             .split(separator: "\n")
-            .map(String.init)
+            .map { item in
+
+                let parts = item.components(
+                    separatedBy: "|"
+                )
+
+                return (
+                    question: parts.first ?? "",
+                    answer: parts.count > 1
+                        ? parts[1]
+                        : "Unknown"
+                )
+            }
     }
 
     var body: some View {
 
-        NavigationStack {
+        List {
 
-            List {
+            if entries.isEmpty {
 
-                if questions.isEmpty {
+                ContentUnavailableView(
+                    "No Missed Questions",
+                    systemImage: "checkmark.circle"
+                )
 
-                    ContentUnavailableView(
-                        "No Missed Questions",
-                        systemImage: "checkmark.circle"
-                    )
+            } else {
 
-                } else {
+                ForEach(
+                    Array(entries.enumerated()),
+                    id: \.offset
+                ) { _, entry in
 
-                    ForEach(questions, id: \.self) { question in
+                    VStack(
+                        alignment: .leading,
+                        spacing: 10
+                    ) {
 
-                        Text(question)
+                        Text(entry.question)
+                            .font(.headline)
+
+                        Text(
+                            "Correct Answer: \(entry.answer)"
+                        )
+                        .foregroundColor(.green)
 
                     }
+                    .padding(.vertical, 6)
                 }
             }
-            .navigationTitle("Review Mistakes")
         }
+        .navigationTitle("Review Mistakes")
     }
+}
+
+#Preview {
+    ReviewMissedQuestionsView()
 }
